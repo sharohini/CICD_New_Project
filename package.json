@@ -6,7 +6,8 @@
   "scripts": {
     "build": "npm run test && tsc",
     "build2": "npm run test:coverage && tsc",
-    "test": "cd src && jest --"
+    "test": "cd src && jest --",
+    "scan": "sonar-scanner.bat -D\"sonar.projectKey=CICD_curse\" -D\"sonar.sources=.\" -D\"sonar.host.url=http://127.0.0.1:9000\" -D\"sonar.login=sqp_e683bcd64272248134acf04c2d1b9af7ec0c5a4f\""
   },
   "author": "Blad",
   "license": "MIT",
