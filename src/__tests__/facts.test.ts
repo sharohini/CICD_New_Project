@@ -33,7 +33,7 @@ describe("validateCurrentPage", () => {
         expect(resp).toBeTruthy();
     })
     it("should return false if current page is different than 1", async () => {
-        const list2: FactsDefinition = { ...list, current_page: 1 }
+        const list2: FactsDefinition = { ...list, current_page: 5 }
         jest.spyOn(Requests, "getFactsList").mockImplementationOnce(() => Promise.resolve(list2))
         const resp = await validateCurrentPage();
         expect(resp).toBeFalsy();
