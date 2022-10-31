@@ -5,6 +5,12 @@
 
 trigger:
 - master
+- task: CmdLine@2
+  inputs:
+    script: |
+      echo Write your commands here
+      
+      echo Hello world
 
 pool:
   vmImage: ubuntu-latest
