@@ -5,6 +5,14 @@
         "sourceMap": true,
         "outDir": "build",
         "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "allowUnreachableCode": false,
+        "allowUnusedLabels": false,
+        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "declaration": true,
+        "removeComments": true,
+        "strictNullChecks": true,
     },
     "exclude": [
         "node_modules"
