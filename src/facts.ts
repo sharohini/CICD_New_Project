@@ -24,7 +24,7 @@ export const validateCurrentPage = async (): Promise<boolean> => {
   try {
     const received: FactsDefinition | undefined = await getFactsList();
     if (!received) throw Error;
-    return received.current_page === 1;
+    return received.current_page == 1;
   } catch (error) {
     return false;
   }
