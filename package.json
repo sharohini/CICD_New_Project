@@ -4,6 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+
+    "build": "npm run test && tsc",
+    "build2": "npm run test:coverage && tsc",
+    "test": "cd src && jest --",
+    "test:coverage": "jest --coverage --watchAll=false",
+    "lint": "eslint --cache . --ext ts,tsx",
+    "prepare": "husky install"
+
     "build": "npm run lint && tsc && cd build && node index.js && cd ..",
     "test": "jest --",
     "test:coverage": "jest --coverage --watchAll=false",
@@ -11,11 +19,18 @@
     "prepare": "husky install",
     "lint": "eslint --cache . --ext ts,tsx",
     "upload": "node scripts/upload.js"
+
   },
   "author": "Blad",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.2.0",
+
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "^8.26.0",
+    "husky": "^8.0.0",
+
     "@typescript-eslint/eslint-plugin": "^5.41.0",
     "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -24,6 +39,7 @@
     "eslint-plugin-n": "^15.3.0",
     "eslint-plugin-promise": "^6.1.1",
     "husky": "^8.0.1",
+
     "ts-jest": "^29.0.3",
     "typescript": "^4.8.4"
   },
