@@ -2,9 +2,7 @@ import { BASE_URL } from "./constants";
 import axios from "axios";
 import { FactDefinition, FactsDefinition } from "./types";
 
-
 export const isResponseValid = (status: number) => status === 200;
-
 
 /**
  * Request cats fact service
@@ -32,9 +30,3 @@ export const getFactsList = async (): Promise<FactsDefinition | undefined> => {
   }
   return undefined;
 };
-
-
-export const isResponseValid = (status: number) => {
-  return status === 200;
-};
-
