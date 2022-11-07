@@ -9,7 +9,8 @@
     "test:coverage": "jest --coverage --watchAll=false",
     "scan": "npm run test:coverage && sonar-scanner.bat -D\"sonar.projectKey=CICD_curse\" -D\"sonar.sources=.\" -D\"sonar.host.url=http://127.0.0.1:9000\" -D\"sonar.login=sqp_e683bcd64272248134acf04c2d1b9af7ec0c5a4f\"",
     "prepare": "husky install",
-    "lint": "eslint --cache . --ext ts,tsx"
+    "lint": "eslint --cache . --ext ts,tsx",
+    "upload": "node scripts/upload.js"
   },
   "author": "Blad",
   "license": "MIT",
