@@ -1,0 +1,33 @@
+name: Production Build test
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  Test-Build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Test Lint
+        run: npm run lint
+
+      - name: Test coverage
+        run: npm run test:coverage
+
+      - name: Build
+        run: npm run build
+
+      - name: Execute Build
+        run: cd build && node index.js
+
+      - name: Upload results
+        run: npm run upload
