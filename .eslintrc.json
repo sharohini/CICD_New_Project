@@ -1,53 +1,24 @@
 {
-  "env": {
-    "es2021": true,
-
-    "node": true
-  },
-
-  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
-
-  "overrides": [],
-
-  "parser": "@typescript-eslint/parser",
-
-  "parserOptions": {
-    "ecmaVersion": "latest",
-
-    "sourceType": "module"
-  },
-
-  "plugins": ["@typescript-eslint"],
-
-  "rules": {
-    "quotes": ["error", "double"],
-
-    "@typescript-eslint/no-explicit-any": ["error"],
-
-    "@typescript-eslint/no-shadow": ["warn"],
-
-    "@typescript-eslint/consistent-type-assertions": [
-      "error",
-
-      {
-        "assertionStyle": "as",
-
-        "objectLiteralTypeAssertions": "never"
-      }
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
     ],
-
-    "linebreak-style": 0,
-
-    "import/no-unresolved": "off",
-
-    "import/extensions": "off",
-
-    "import/order": "off",
-
-    "import/prefer-default-export": "off",
-
-    "comma-dangle": "off",
-
-    "camelcase": "off"
-  }
+    "overrides": [
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+    }
 }
