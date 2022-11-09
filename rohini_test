@@ -33,6 +33,29 @@ https://github.com/sharohini/CICD_New_Project/commit/09e70fcce8657cb3dc757d42c6b
     "@typescript-eslint/no-explicit-any": ["error"],
 
     "@typescript-eslint/no-shadow": ["warn"],
+    
+    =============================================================================
+    
+    name: Test Code
+on:
+  pull_request:
+  push:
+    branches:
+      - develop/*
+jobs:
+  test-code:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+      - name: Install Dependencies
+        run: npm install
+      - name: Test Lint
+        run: npm run lint
+      - name: Test coverage
+        run: npm run test
 
     "@typescript-eslint/consistent-type-assertions": [
 
