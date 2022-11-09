@@ -56,7 +56,7 @@ jobs:
         run: npm run lint
       - name: Test coverage
         run: npm run test
-
+===========================================================================================
     "@typescript-eslint/consistent-type-assertions": [
 
       "error",
